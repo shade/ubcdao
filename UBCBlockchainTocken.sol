@@ -24,7 +24,7 @@ contract UBCBlockchainTocken is ERC20 {
     mapping (address => uint) private __balanceOf;
     mapping (address => mapping(address =>uint)) private __allowances;
     
-    function UBCBlockchainTocken() internal {
+    function UBCBlockchainTocken() {
         __balanceOf[msg.sender] = __totalSupply;
         creator = msg.sender;
         
