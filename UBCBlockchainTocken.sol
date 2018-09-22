@@ -60,7 +60,7 @@ contract UBCBlockchainTocken is ERC20 {
         // If the membership is transferred to you, you are an external.
         accountType[_to] = AccountType.EXTERNAL;
         // Delete the current member as member.
-        _balanceOf[_to] = 0;
+        _balanceOf[msg.sender] = 0;
         accountType[msg.sender] = AccountType.EXTERNAL;
     }
     
